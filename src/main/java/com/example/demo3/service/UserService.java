@@ -11,8 +11,10 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class UserService {
+    
     @Autowired
     UserRepository userRepository;
+
     @Autowired
     PasswordEncoder passwordEncoder;
     public void createUser(UserInputDTO userInputDTO){

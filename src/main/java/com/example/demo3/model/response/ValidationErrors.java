@@ -6,7 +6,6 @@ import lombok.Data;
 
 @Data
 @AllArgsConstructor
-@Builder
 public class ValidationErrors {
     private String message;
     private String cause;

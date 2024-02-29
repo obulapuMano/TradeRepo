@@ -16,11 +16,11 @@ import org.springframework.security.web.SecurityFilterChain;
 public class SecurityConfig {
     private final UserInfoUserDetailsService userInfoUserDetailsService;
 
-    public SecurityConfig(UserInfoUserDetailsService userInfoUserDetailsService) {
+    public SecurityConfig (UserInfoUserDetailsService userInfoUserDetailsService) {
         this.userInfoUserDetailsService = userInfoUserDetailsService;
     }
 @Bean
-    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+    public SecurityFilterChain securityFilterChain (HttpSecurity http) throws Exception {
        return http.csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(auth->auth
                         .requestMatchers("/user").permitAll()

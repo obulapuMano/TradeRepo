@@ -18,7 +18,7 @@ public class TradeController {
     TradeService tradeService;
 
     @PostMapping("/trade")
-    public ResponseEntity<?>createTrade(@Valid @RequestBody TradeInputDTO tradeInputDTO){
+    public ResponseEntity<?> createTrade(@Valid @RequestBody TradeInputDTO tradeInputDTO){
         tradeService.createTrade(tradeInputDTO);
         return ResponseEntity.status(HttpStatus.CREATED).build();
     }
