@@ -27,7 +27,6 @@ public class UserValidationHandler {
                 .collect(Collectors.toList());
       return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(user);
     }
-    
     @ExceptionHandler(UserAlreadyExistsException.class)
     public ResponseEntity<ValidationErrors> handleUserValidationErrors(UserAlreadyExistsException e){
 

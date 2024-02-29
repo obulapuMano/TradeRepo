@@ -13,8 +13,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class TradeController {
+
     @Autowired
     TradeService tradeService;
+
     @PostMapping("/trade")
     public ResponseEntity<?>createTrade(@Valid @RequestBody TradeInputDTO tradeInputDTO){
         tradeService.createTrade(tradeInputDTO);

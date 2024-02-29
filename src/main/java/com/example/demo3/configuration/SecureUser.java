@@ -16,7 +16,6 @@ public class SecureUser implements UserDetails {
     public SecureUser(User user) {
         this.user = user;
     }
-
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return Collections.emptyList();
